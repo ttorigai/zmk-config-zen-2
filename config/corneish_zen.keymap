@@ -27,17 +27,18 @@
             &kp LCTRL &kp LGUI &lt 1 SPACE   &lt 2 SPACE &kp RSHFT &kp RALT
                         >;
                 };
+
                 lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// |  `   |   1   |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |   |
-// | TAB  |  BT1  | BT2 | BT3 | BT4 | BT5 |   |  ^  |  &  |  *  |  (  |  )  | \ |
-// | SHFT | BTCLR |     |     |     |     |   |  -  |  =  |  [  |  ]  |     |   |
-//                    |     |     |       |   |     |     |     |
+// |  `   |   1   |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |   0   |   |
+// | TAB  |       |     |     |     |     |   |  ^  |  &  |  *  |  (  |   )   | \ |
+// | SHFT |       |     |     |     |     |   |  -  |  =  |  [  |  ]  | MO(3) |   |
+//                      |     |     |     |   |     |     |     |
                         bindings = <
    &kp GRAVE &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp N7    &kp N8   &kp N9   &kp N0   &trans
-   &trans    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp CARET &kp AMPS  &kp STAR &kp LPAR &kp RPAR &kp BSLH
-   &trans    &bt BT_CLR   &none        &none        &none        &none          &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &none    &trans
+   &trans    &none        &none        &none        &none        &none          &kp CARET &kp AMPS  &kp STAR &kp LPAR &kp RPAR &kp BSLH
+   &trans    &none        &none        &none        &none        &none          &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &mo 3    &trans
                           	                             &trans &trans &trans   &trans &trans &trans
                         >;
                 };
@@ -56,5 +57,22 @@
                           	           &trans &trans &trans   &trans &trans &trans
                         >;
                 };
+
+                bluetooth_layer {
+                        label = "BLUETOOTH";
+// -----------------------------------------------------------------------------------------
+// |  `   |   1   |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |   |
+// | TAB  |  BT1  | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |   |
+// | SHFT | BTCLR |     |     |     |     |   |     |     |     |     |     |   |
+//                      |     |     |     |   |     |     |     |
+                        bindings = <
+   &kp GRAVE &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp N7    &kp N8   &kp N9   &kp N0   &trans
+   &trans    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none     &none     &none    &none    &none    &none
+   &trans    &bt BT_CLR   &none        &none        &none        &none          &none     &none     &none    &none    &none    &trans
+                          	                             &trans &trans &trans   &trans &trans &trans
+                        >;
+                        >;
+                };
+
         };
 };
