@@ -71,7 +71,6 @@
    &trans    &bt BT_CLR   &none        &none        &none        &none          &none     &none     &none    &none    &none    &trans
                           	                             &trans &trans &trans   &trans &trans &trans
                         >;
-                        >;
                 };
 
         };
